@@ -1,0 +1,4 @@
+
+ex 1 : 
+-Strategy/template methode : utile lorsque plusieurs algorithmes se ressemble marche ps pck ici on vx faire plusieurs traitement a la fois
+-Observer : interface graphique chargeur envoie le ligne a tout les observeur et chacun analyse une ligne 
