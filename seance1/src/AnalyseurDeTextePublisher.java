@@ -6,10 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AnalyseurDeTextePublisher {
-	private static List<Observer> observers = new ArrayList<>();
+
 
 
 	public static void main(String[] args) throws IOException {
+		List<Observer> observers = new ArrayList<>();
 		observers.add(new NombreMot());
 		observers.add(new NombreLigne());
 		observers.add(new NombreOccurenceMotParLigne("Belgium"));
