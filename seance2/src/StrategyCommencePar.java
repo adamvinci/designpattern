@@ -6,6 +6,11 @@ public class StrategyCommencePar implements Strategy {
 
 	@Override
 	public boolean imprimerSi(String s) {
-		return s.charAt(0)==lettre;
+		 return s.charAt(0)==lettre;
+
 	}
+
+
+
+
 }

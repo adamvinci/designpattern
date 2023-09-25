@@ -4,9 +4,7 @@ import java.io.IOException;
 import java.util.StringTokenizer;
 
 public class ListerMots {
-
     private String fichier;
-
     public ListerMots(String fichier) {
         this.fichier = fichier;
     }
@@ -17,8 +15,8 @@ public class ListerMots {
             StringTokenizer mots = new StringTokenizer(buffer, " \t.;(){}\"'*=:!/\\");
             while (mots.hasMoreTokens()) {
                 String mot = mots.nextToken();
-                if (strategy.imprimerSi(mot))
-                    System.out.println(mot);
+                    if (strategy.imprimerSi(mot))
+                        System.out.println(mot);
             }
         }
     }
