@@ -2,3 +2,7 @@
 ex 1 : 
 -Strategy/template methode : utile lorsque plusieurs algorithmes se ressemble marche ps pck ici on vx faire plusieurs traitement a la fois
 -Observer : interface graphique chargeur envoie le ligne a tout les observeur et chacun analyse une ligne 
+ex2 :
+-Strategy : car listemot1 listemot2 listemot3 c'est presque les memes algorithme
+2 et 3 :
+Strategy/composite

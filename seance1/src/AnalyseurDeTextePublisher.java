@@ -6,15 +6,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AnalyseurDeTextePublisher {
-
-
-
-	public static void main(String[] args) throws IOException {
-		List<Observer> observers = new ArrayList<>();
+	List<Observer> observers = new ArrayList<>();
+	public AnalyseurDeTextePublisher() {
 		observers.add(new NombreMot());
 		observers.add(new NombreLigne());
 		observers.add(new NombreOccurenceMotParLigne("Belgium"));
 		observers.add(new NombrePalindrome());
+	}
+	private void readFile()throws IOException{
 		BufferedReader lecteurAvecBuffer = null;
 		String ligne;
 		try {
@@ -28,7 +27,10 @@ public class AnalyseurDeTextePublisher {
 		}
 		lecteurAvecBuffer.close();
 		observers.forEach(Observer::printResult);
+	}
 
-
+	public static void main(String[] args) throws IOException {
+	AnalyseurDeTextePublisher analyseurDeTextePublisher =new AnalyseurDeTextePublisher();
+	analyseurDeTextePublisher.readFile();
 	}
 }
