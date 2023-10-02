@@ -1,7 +1,6 @@
 public class StrageyLongueur implements Strategy{
 	private int longeur;
 
-
 	public StrageyLongueur(int longeur ) {
 		this.longeur = longeur;
 	}
@@ -9,9 +8,8 @@ public class StrageyLongueur implements Strategy{
 
 	@Override
 	public boolean imprimerSi(String s) {
-		return s.length()==longeur;
+		return s.length() == longeur;
 	}
-
 
 
 

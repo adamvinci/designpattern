@@ -1,22 +1,22 @@
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Ou implements Strategy {
 
-  private List<Strategy> strategies;
-  private Visitor visitor;
+  private Strategy[] strategies;
 
-  public Ou(List<Strategy> strategie, Visitor visitor) {
+
+  public Ou(Strategy... strategie ) {
     this.strategies = strategie;
-    this.visitor = visitor;
+
   }
 
   @Override
-  public boolean imprimerSi(String mot) throws IOException {
+  public boolean imprimerSi(String mot)  {
     for (Strategy strategy : strategies) {
       if (strategy.imprimerSi(mot)) {
-        visitor.visit(this);
         return true;
       }
     }

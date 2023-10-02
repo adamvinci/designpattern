@@ -1,25 +1,27 @@
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Et implements Strategy{
-    private List<Strategy> strategies;
-  private Visitor visitor;
-  public Et(List<Strategy> strategie,Visitor visitor) {
+    private Strategy[] strategies;
+
+
+  public Et(Strategy...strategie) {
     this.strategies = strategie;
-    this.visitor = visitor;
-  }
+  } // ou mettre un spread operator (Object ...s)
 
   @Override
-  public boolean imprimerSi(String mot) throws  IOException {
+  public boolean imprimerSi(String mot)    {
     for (Strategy strategy : strategies) {
       if (!strategy.imprimerSi(mot)) {
         return false;
       }
     }
-    visitor.visit(this);
+
     return true; //si le mot respecte toute les strategies il est print
   }
+
 
 
 }

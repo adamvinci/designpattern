@@ -13,24 +13,18 @@ public class Demo {
 
     System.out.println(
         "---------------------------------ET---------------------------------------------");
-    Visitor visitorET = new Compteur();
-    ArrayList<Strategy> strategies = new ArrayList<Strategy>();
-    strategies.add(new StrategyCommencePar('B'));
-    // strategies.add(new StrategyPalindrome(visitor));
-    strategies.add(new StrageyLongueur(7));
-    Strategy et = new Et(strategies,visitorET);
-    listerMots.imprimerSiCommenceParT(et);
-    visitorET.printCmpt();
+
+    Strategy et = new Et(new StrategyCommencePar('B'),new StrageyLongueur(7));
+    Compteur decorator1=new Compteur(et);
+    listerMots.imprimerSiCommenceParT(decorator1);
+    decorator1.printCmpt();
+
 
     System.out.println(
         "---------------------------------Ou---------------------------------------------");
-    Visitor visitorOU = new Compteur();
-    ArrayList<Strategy> strategiesOu = new ArrayList<Strategy>();
-    strategiesOu.add(new StrategyCommencePar('B'));
-    // strategies.add(new StrategyPalindrome(visitor));
-    strategiesOu.add(new StrageyLongueur(7));
-    Strategy ou = new Ou(strategiesOu,visitorOU);
-    listerMots.imprimerSiCommenceParT(ou);
-   visitorOU.printCmpt();
+    Strategy ou = new Ou(new StrategyCommencePar('B'),new StrageyLongueur(7));
+    Compteur decorator2=new Compteur(ou);
+    listerMots.imprimerSiCommenceParT(decorator2);
+    decorator2.printCmpt();
   }
 }
