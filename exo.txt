@@ -12,6 +12,6 @@ maitenant car il nous manque un truc) on choisis decorator(on implemen,te une cl
 
 strategy vs template method: on delegue pas sur strategy mais sur this donc la classe devient abstract
 
-abstract factory vs factory method:
-template method avec que 1new dedans->factory method(abstract class avec method) delegue vers une classe externe
-strategy avec un new ->abstract factory si on delegue a ses enfants
+abstract factory(strategy) vs factory method:
+template method avec que 1new dedans->factory method(abstract class avec method)delegue a ses enfants
+strategy avec un new ->abstract factory si on delegue vers une classe externe

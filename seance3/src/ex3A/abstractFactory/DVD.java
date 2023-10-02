@@ -1,4 +1,4 @@
-package ex3A;
+package ex3A.abstractFactory;
 
 public class DVD implements Produit {
 	public static final double PRIX=19.99;

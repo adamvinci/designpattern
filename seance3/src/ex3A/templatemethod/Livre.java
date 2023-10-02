@@ -1,5 +1,4 @@
-package ex3A;
-
+package ex3A.templatemethod;
 public class Livre implements Produit{
 	public static final double PRIX=14.99;
 	private String name;

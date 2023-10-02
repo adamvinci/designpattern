@@ -1,4 +1,4 @@
-package ex3A;
+package ex3A.abstractFactory;
 
 public interface Produit {
 
