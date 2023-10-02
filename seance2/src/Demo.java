@@ -24,7 +24,7 @@ public class Demo {
         "---------------------------------Ou---------------------------------------------");
     Strategy ou = new Ou(new StrategyCommencePar('B'),new StrageyLongueur(7));
     Compteur decorator2=new Compteur(ou);
-    listerMots.imprimerSiCommenceParT(decorator2);
+    listerMots.imprimerSiCommenceParT(decorator2);//mettre decorator et pas strategy
     decorator2.printCmpt();
   }
 }
