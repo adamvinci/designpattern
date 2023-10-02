@@ -1,4 +1,4 @@
-
+pour reperer un pattern:on fait un diagramme de classe
 ex 1 : 
 -Strategy/template methode : utile lorsque plusieurs algorithmes se ressemble marche ps pck ici on vx faire plusieurs traitement a la fois
 -Observer : interface graphique chargeur envoie le ligne a tout les observeur et chacun analyse une ligne 
@@ -9,3 +9,9 @@ Strategy/composite
 pour le 2.4 : il faut un composite(on peux utiliser une arraylist ou le spread operator dans le cosntrcuteur voir 'Et' 'Ou'
  qui rajoute uen mehtode pour print le cmpt pas command pattern:(quand on sait qu'on doit faire qlq chose mais qu'on peut pas le faire
 maitenant car il nous manque un truc) on choisis decorator(on implemen,te une classsemais on rajoute une methode)
+
+strategy vs template method: on delegue pas sur strategy mais sur this donc la classe devient abstract
+
+abstract factory vs factory method:
+template method avec que 1new dedans->factory method(abstract class avec method) delegue vers une classe externe
+strategy avec un new ->abstract factory si on delegue a ses enfants
