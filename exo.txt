@@ -25,3 +25,25 @@ etat =dormir/reveiller
 enum x{comportement y},y{comportement y}
 comportement par default
 copier le code de base sans rien changer juste les etat = devient setEtat
+
+5:
+Builder:Ce pattern regle le fait que java contrairement a python ne permet pasde creer des parametres de constructeur optionel il faut ecrire null
+  public UserBuilder(String firstName, String lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        } public UserBuilder address(String address) {
+                    this.address = address;
+                    return this;
+                }
+                 public User build() {
+                            return new User(this);
+                        }
+                           private User(UserBuilder builder) {
+                                this.firstName = builder.firstName;
+                                this.lastName = builder.lastName;
+                                this.age = builder.age;
+                                this.phone = builder.phone;
+                                this.address = builder.address;
+                            }
+User lonerism = new User.Builder(firstName,lastName).adresse().build()
+on utilise pas de set pour pas perdre l'avantage des objets immuable
