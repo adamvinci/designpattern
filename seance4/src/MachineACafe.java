@@ -30,6 +30,8 @@ public class MachineACafe {
 		this.etatCourant = state;
 	}
 	public void entrerMonnaie(Piece piece) {
+		montantEnCours += piece.getValeur();
+		afficherMontant();
 		etatCourant.entrerMonnaie(this,piece);
 	}
 	

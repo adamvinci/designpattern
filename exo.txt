@@ -8,14 +8,20 @@ ex2 :
 Strategy/composite
 pour le 2.4 : il faut un composite(on peux utiliser une arraylist ou le spread operator dans le cosntrcuteur voir 'Et' 'Ou'
  qui rajoute uen mehtode pour print le cmpt pas command pattern:(quand on sait qu'on doit faire qlq chose mais qu'on peut pas le faire
-maitenant car il nous manque un truc) on choisis decorator(on implemen,te une classsemais on rajoute une methode)
+maitenant car il nous manque un truc) on choisis decorator(on implemen,te une classsemais on rajoute une methode,comportement initiale et faire des choses en plus
+en cours d'execution)
 
 strategy vs template method: on delegue pas sur strategy mais sur this donc la classe devient abstract
 
 abstract factory(strategy) vs template method:
 template method avec que 1new dedans->factory method(abstract class avec method)delegue a ses enfants
 strategy avec un new ->abstract factory si on delegue vers une classe externe
-
+3.c->Pattern : 1. Decorator (Captaine, Battleship)
+     Pattern : Strategy qui joue le role c'est Distance, y a kilometre et miles
+     Pattern : Adapteur avec la classe BattleFishingBoat prq prcq il encapsule un FishingBoat et il va a chaque fois changer le nom des méthodes
 4:
 state:strategy vs state c'est que state know about each other ,par ex quand ours dors attack=zzz quand reveiller attack==grr donc
 etat =dormir/reveiller
+enum x{comportement y},y{comportement y}
+comportement par default
+copier le code de base sans rien changer juste les etat = devient setEtat

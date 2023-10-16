@@ -6,6 +6,7 @@ public class CollecteState extends State{
       machineACafe.setBoisson(toucheBoisson);
       machineACafe.afficherPasAssez(toucheBoisson);
       machineACafe.setState(new PasAssezState());
+      return;
     }
     machineACafe.setMontantEnCours(machineACafe.getMontantEnCours()-toucheBoisson.getPrix());
     machineACafe.afficherBoisson(toucheBoisson);
