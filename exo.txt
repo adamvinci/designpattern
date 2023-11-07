@@ -28,6 +28,7 @@ copier le code de base sans rien changer juste les etat = devient setEtat
 
 5:
 Builder:Ce pattern regle le fait que java contrairement a python ne permet pasde creer des parametres de constructeur optionel il faut ecrire null
+builder dans la meme classe que user avec static
   public UserBuilder(String firstName, String lastName) {
             this.firstName = firstName;
             this.lastName = lastName;
@@ -47,3 +48,7 @@ Builder:Ce pattern regle le fait que java contrairement a python ne permet pasde
                             }
 User lonerism = new User.Builder(firstName,lastName).adresse().build()
 on utilise pas de set pour pas perdre l'avantage des objets immuable
+
+7:
+essayer de strategy Robot alors que robotimpl aslo implements Robot donc ca marche pas faut strategy sur une classe qui implemente robot pour avoir les strategy
+un niveau en dessous des implementations
