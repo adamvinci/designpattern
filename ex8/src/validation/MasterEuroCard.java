@@ -11,11 +11,7 @@ public class MasterEuroCard extends Generateur{
   }
     @Override
   public boolean valider(String numero) {
-    if (numero.length() == 16 && numero.substring(0,2).matches("^(51|52|53|54|55)$")) {
-      return true;
-    } else {
-      return super.valider(numero);
-    }
+   return (numero.length() == 16 && numero.substring(0,2).matches("^(51|52|53|54|55)$"));
   }
 
   @Override

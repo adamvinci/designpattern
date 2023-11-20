@@ -13,11 +13,8 @@ public class DiscoverHandler extends Generateur{
 
   @Override
   public boolean valider(String numero) {
-    if (numero.length() == 16 && (numero.startsWith("6011") || numero.startsWith("65"))) {
-      return true;
-    } else {
-      return super.valider(numero);
-    }
+    return  (numero.length() == 16 && (numero.startsWith("6011") || numero.startsWith("65")));
+
   }
 
   @Override

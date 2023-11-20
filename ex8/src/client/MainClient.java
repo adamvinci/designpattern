@@ -32,10 +32,8 @@ public class MainClient {
 					dateExpiration.setTime(sdf.parse(parts[1]));
 					Generateur handler = new AmericanExpressHandler(new DiscoverHandler
 							(new DinerClubHandler(new MasterEuroCard(new VisaHandler(null)))));
-					CarteDeCredit carteDeCredit = null;
-					if(handler.valider(parts[0])){
-						carteDeCredit = handler.creerCarte(parts[0], dateExpiration, parts[2]);
-					}
+					CarteDeCredit carteDeCredit = handler.validerAndCreate(parts[0], dateExpiration, parts[2]);
+
 					if (carteDeCredit == null)
 						System.out.println("Numéro de carte invalide " + parts[0]);
 					else {

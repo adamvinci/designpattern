@@ -10,12 +10,17 @@ public abstract class Generateur {
 	public Generateur(Generateur successeur) {
 		this.successeur = successeur;
 	}
-
-	public boolean valider(String numero){
-		if(successeur == null) return false;
-		return successeur.valider(numero);
+	public CarteDeCredit validerAndCreate(String numero, Calendar dateExpiration, String nom) {
+		if (valider(numero)) {
+			return creerCarte(numero, dateExpiration, nom);
+		} else if (successeur != null) {
+			return successeur.validerAndCreate(numero, dateExpiration, nom);
+		} else {
+			return null;  // or throw an exception if needed
+		}
 	}
 
+	public abstract boolean valider(String numero);
 
 	public abstract CarteDeCredit creerCarte(String numero, Calendar dateExpiration, String nom);
 }

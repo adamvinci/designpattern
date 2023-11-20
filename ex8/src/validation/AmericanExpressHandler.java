@@ -13,11 +13,8 @@ public class AmericanExpressHandler extends Generateur{
 
   @Override
   public boolean valider(String numero) {
-    if (numero.length() == 15 && (numero.startsWith("37") || numero.startsWith("34"))) {
-      return true;
-    } else {
-      return super.valider(numero);
-    }
+    return (numero.length() == 15 && (numero.startsWith("37") || numero.startsWith("34")));
+
   }
   @Override
   public CarteDeCredit creerCarte(String numero, Calendar dateExpiration, String nom) {

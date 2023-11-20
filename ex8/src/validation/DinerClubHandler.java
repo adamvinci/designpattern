@@ -13,8 +13,7 @@ public class DinerClubHandler extends Generateur{
 
   @Override
   public boolean valider(String numero) {
-    if (numero.length() == 14 && numero.startsWith("36")) return true;
-    return super.valider(numero);
+    return  (numero.length() == 14 && numero.startsWith("36"));
 
   }
   @Override

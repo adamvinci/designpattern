@@ -9,13 +9,11 @@ public class VisaHandler extends Generateur{
     super(successeur);
 
   }
+
   @Override
   public boolean valider(String numero) {
-    if (numero.length() == 16 && numero.startsWith("4")) {
-      return true;
-    } else {
-      return super.valider(numero);
-    }
+    return  (numero.length() == 16 && numero.startsWith("4")) ;
+
   }
   @Override
   public CarteDeCredit creerCarte(String numero, Calendar dateExpiration, String nom) {
