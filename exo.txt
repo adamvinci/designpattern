@@ -52,3 +52,35 @@ on utilise pas de set pour pas perdre l'avantage des objets immuable
 7:
 essayer de strategy Robot alors que robotimpl aslo implements Robot donc ca marche pas faut strategy sur une classe qui implemente robot pour avoir les strategy
 un niveau en dessous des implementations
+
+8:
+solution prof :
+ public abstract boolean valider(String numero);
+
+    public CarteDeCredit creerCarte(String numero, Calendar dateExpiration, String nom) {
+        if (successeur != null) {
+          return   successeur.creerCarte(numero, dateExpiration, nom);
+        } else {
+            return null;  // or throw an exception if needed
+        }
+    }
+    CarteDeCredit carteDeCredit = handler.creerCarte(parts[0], dateExpiration, parts[2]);
+ public AmericanExpressHandler(Generateur successeur) {
+    super(successeur);
+
+  }
+
+  @Override
+  public boolean valider(String numero) {
+    return (numero.length() == 15 && (numero.startsWith("37") || numero.startsWith("34")));
+
+  }
+
+  @Override
+  public CarteDeCredit creerCarte(String numero, Calendar dateExpiration, String nom) {
+    if (valider(numero)) {
+      return new AmEx(numero, dateExpiration, nom);
+    } else {
+      return super.creerCarte(numero, dateExpiration, nom);
+    }
+  }
